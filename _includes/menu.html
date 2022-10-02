@@ -1,4 +1,5 @@
 <a href="/" class="px-0 py-0"><img src="/assets/images/logo.png"></a>
 <div class="flex-fill"></div>
-<a href="/one-col-test" class="card p-08 py-0"><strong>One Column Page</strong></a>
-<a href="/two-col-test" class="card p-08 py-0"><strong>Two Column Page</strong></a>
+{% for button in site.data.menu %}
+<a href="{{ button.link }}" class="card p-08 py-0"><strong>{{ button.name }}</strong></a>
+{% endfor %}

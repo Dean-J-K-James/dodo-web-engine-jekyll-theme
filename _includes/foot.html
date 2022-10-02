@@ -1,5 +1,5 @@
 <div class="flex-fill"></div>
-{% for link in site.foot-links %}
-<a href="{{ link[1] }}" class="card p-08 py-0"><strong>{{ link[0] }}</strong></a>
+{% for button in site.data.foot %}
+<a href="{{ button.link }}" class="card p-08 py-0"><strong>{{ button.name }}</strong></a>
 {% endfor %}
 <div class="flex-fill"></div>
