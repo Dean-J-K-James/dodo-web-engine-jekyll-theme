@@ -1,6 +1,6 @@
 {% assign title = page.title %}
 {% assign image = page.url | prepend: "/assets/images" | append: "/thumbnail.png" | absolute_url %}
-{% assign descr = page.excerpt | remove: '<p>' | remove: '</p>' | strip_newlines %}
+{% assign descr = page.description %}
 
 <meta name="title"               content="{{ title }}">
 <meta name="image"               content="{{ image }}">
