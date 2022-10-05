@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<div id="cell-page" class="flex-col flex-16">
+<div class="two-column-page">
     {% for section in page.pages %}
     {% include {{ section }}.html %}
     {% endfor %}
 </div>
-<div id="cell-side" class="flex-col flex-16">
+<div class="two-column-side">
     {% for section in page.sides %}
     {% include {{ section }}.html %}
     {% endfor %}

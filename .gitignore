@@ -1,4 +1,5 @@
 _site/
+node_modules/
 .bundle
 .jekyll-cache/
 .jekyll-metadata

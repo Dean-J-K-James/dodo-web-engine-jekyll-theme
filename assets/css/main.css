@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .body { @apply bg-gray-200 font-['Arial'] }
+
+    .cook { @apply flex flex-row gap-2 bg-gray-800 text-white text-xs leading-8 p-2 lg:px-[20%] justify-between }
+    .menu { @apply flex flex-row gap-2 bg-gray-500 text-white text-xs leading-8 p-2 lg:px-[20%]                 }
+    .foot { @apply flex flex-row gap-2 bg-gray-400 text-white text-xs leading-8 p-2 lg:px-[20%] justify-center  }
+
+    .cook-button { @apply hover:bg-gray-900 px-2 hover:text-white font-bold }
+    .menu-button { @apply hover:bg-gray-400 px-2 hover:text-white font-bold }
+    .foot-button { @apply hover:bg-gray-500 px-2 hover:text-white font-bold }
+
+    .one-column { @apply grid grid-cols-12 gap-2 lg:gap-4 p-2 lg:p-8 lg:px-[20%] }
+    .two-column { @apply grid grid-cols-12 gap-2 lg:gap-4 p-2 lg:p-8 lg:px-[20%] }
+
+    .one-column-page { @apply grid grid-cols-1 gap-2 lg:gap-4 col-span-12 lg:col-span-12 }
+    .two-column-page { @apply grid grid-cols-1 gap-2 lg:gap-4 col-span-12 lg:col-span-8  }
+    .two-column-side { @apply grid grid-cols-1 gap-2 lg:gap-4 col-span-12 lg:col-span-4  }
+
+    .cell { @apply flex flex-col gap-4 p-4 bg-white }
+}

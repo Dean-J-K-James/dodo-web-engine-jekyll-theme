@@ -1,5 +1,5 @@
-<a href="/" class="px-0 py-0"><img src="/assets/images/logo.png"></a>
-<div class="flex-fill"></div>
+<a href="/"><img src="/assets/images/logo.png"></a>
+<div class="flex-1"></div>
 {% for button in site.data.menu %}
-<a href="{{ button.link }}" class="card p-08 py-0"><strong>{{ button.name }}</strong></a>
+{% include button.html link=button.link name=button.name class='menu-button' %}
 {% endfor %}

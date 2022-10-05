@@ -13,11 +13,11 @@
     {% include google-analytics.html %}
 </head>
 
-<body>
-    <div id="cook" class="{{ site.data.styles['cook'].class }}">{% include cook.html %}</div>
-    <nav id="menu" class="{{ site.data.styles['menu'].class }}">{% include menu.html %}</nav>
-    <div id="page" class="{{ site.data.styles[page.layout].class }}">{{ content }}</div>
-    <nav id="foot" class="{{ site.data.styles['foot'].class }}">{% include foot.html %}</nav>
+<body class="body">
+    <div class="cook">{% include cook.html %}</div>
+    <nav class="menu">{% include menu.html %}</nav>
+    <div class="{{ page.layout }}">{{ content }}</div>
+    <nav class="foot">{% include foot.html %}</nav>
 </body>
 
 </html>
