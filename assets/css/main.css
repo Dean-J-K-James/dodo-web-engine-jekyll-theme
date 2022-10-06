@@ -17,9 +17,9 @@
     .one-column { @apply grid grid-cols-12 gap-2 lg:gap-4 p-2 lg:p-8 lg:px-[20%] }
     .two-column { @apply grid grid-cols-12 gap-2 lg:gap-4 p-2 lg:p-8 lg:px-[20%] }
 
-    .one-column-page { @apply grid grid-cols-1 gap-2 lg:gap-4 col-span-12 lg:col-span-12 }
-    .two-column-page { @apply grid grid-cols-1 gap-2 lg:gap-4 col-span-12 lg:col-span-8  }
-    .two-column-side { @apply grid grid-cols-1 gap-2 lg:gap-4 col-span-12 lg:col-span-4  }
+    .one-column-page { @apply flex flex-col gap-2 lg:gap-4 col-span-12 lg:col-span-12 }
+    .two-column-page { @apply flex flex-col gap-2 lg:gap-4 col-span-12 lg:col-span-8  }
+    .two-column-side { @apply flex flex-col gap-2 lg:gap-4 col-span-12 lg:col-span-4  }
 
     .cell { @apply flex flex-col gap-4 p-4 bg-white }
 }

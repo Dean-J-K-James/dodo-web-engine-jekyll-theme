@@ -692,8 +692,8 @@ video {
 
 .one-column-page {
   grid-column: span 12 / span 12;
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 0.5rem;
 }
 
@@ -706,8 +706,8 @@ video {
 
 .two-column-page {
   grid-column: span 12 / span 12;
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 0.5rem;
 }
 
@@ -720,8 +720,8 @@ video {
 
 .two-column-side {
   grid-column: span 12 / span 12;
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 0.5rem;
 }
 
