@@ -15,7 +15,7 @@
 
 <body class="body">
     <div class="cook">{% include cook.html %}</div>
-    <nav class="menu">{% include menu.html %}</nav>
+    <nav class="flex flex-row gap-2 bg-primary text-white text-xs leading-8 p-2 lg:px-[20%]">{% include menu.html %}</nav>
     <div class="{{ page.layout }}">{{ content }}</div>
     <nav class="foot">{% include foot.html %}</nav>
 </body>
