@@ -1,1 +1,8 @@
-void 0 === Cookies.get("cookies-accept") && $("#cook").css("display", "flex"), $("#cookies-accept").click(function () { Cookies.set("cookies-accept", !0), location.reload() });
+if (typeof Cookies.get('cookies-accept') === 'undefined') {
+    $('#cook').css('display', 'flex');
+}
+
+$('#cookies-accept').click(function () {
+    Cookies.set('cookies-accept', true);
+    location.reload();
+});

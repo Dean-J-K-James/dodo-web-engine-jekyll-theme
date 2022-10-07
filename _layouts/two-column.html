@@ -1,14 +1,6 @@
 ---
-layout: default
+layout: page
 ---
 
-<div class="two-column-page">
-    {% for section in page.pages %}
-    {% include {{ section }}.html %}
-    {% endfor %}
-</div>
-<div class="two-column-side">
-    {% for section in page.sides %}
-    {% include {{ section }}.html %}
-    {% endfor %}
-</div>
+<div class="flex flex-col col-span-12 gap-2 lg:col-span-8 lg:gap-4">{% for section in page.pages %}{% include {{ section }}.html %}{% endfor %}</div>
+<div class="flex flex-col col-span-12 gap-2 lg:col-span-4 lg:gap-4">{% for section in page.sides %}{% include {{ section }}.html %}{% endfor %}</div>

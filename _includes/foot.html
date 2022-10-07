@@ -1,3 +1,6 @@
-{% for button in site.data.foot %}
-{% include button.html link=button.link name=button.name class='foot-button' %}
-{% endfor %}
+<nav class="flex flex-row gap-2 bg-foot text-foot-text text-xs leading-8 p-8 lg:px-[20%] justify-center">
+    {% for button in site.data.foot %}
+    <a href="{{ button.link }}" class="px-4 font-bold rounded-full hover:bg-foot-accent hover:text-foot-accent-text">{{
+        button.name }}</a>
+    {% endfor %}
+</nav>
