@@ -1,5 +1,5 @@
 if (typeof Cookies.get('cookies-accept') === 'undefined') {
-    $('#cook').css('display', 'flex');
+    $('#cook').removeClass('!hidden');
 }
 
 $('#cookies-accept').click(function () {

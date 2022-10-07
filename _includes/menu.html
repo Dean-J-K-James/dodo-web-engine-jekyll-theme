@@ -1,8 +1,7 @@
-<nav class="flex flex-row gap-2 bg-menu text-menu-text text-xs leading-8 p-2 lg:px-[20%] justify-between">
+<nav id="menu" class="toolbar bg-menu text-menu-text">
     <a href="/"><img src="/assets/images/logo.png"></a>
     <div class="flex-1"></div>
     {% for button in site.data.menu %}
-    <a href="{{ button.link }}" class="px-4 font-bold rounded-full hover:bg-menu-accent hover:text-menu-accent-text">{{
-        button.name }}</a>
+    {% include button.html link=button.link name=button.name style='menu' %}
     {% endfor %}
 </nav>

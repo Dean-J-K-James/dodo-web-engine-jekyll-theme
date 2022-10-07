@@ -1,6 +1,6 @@
-<div id="cook" class="hidden flex-row gap-2 bg-cook text-cook-text text-xs leading-8 p-2 lg:px-[20%] justify-between">
+<div id="cook" class="toolbar bg-cook text-cook-text !hidden">
     This website uses cookies for tracking. By continuing to use this website, you agree to our use of cookies. Visit
     our cookie policy page to learn more.
-    <a id="cookies-accept"
-        class="px-4 font-bold rounded-full cursor-pointer hover:bg-cook-accent hover:text-cook-accent-text">Accept</a>
+    <div class="flex-1"></div>
+    {% include button.html id='cookies-accept' name='Accept' style='cook' %}
 </div>
