@@ -42,7 +42,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Arial";
   /* 4 */
 }
 
@@ -555,6 +555,16 @@ video {
   grid-column: span 12 / span 12;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -571,6 +581,14 @@ video {
   height: 100vh;
 }
 
+.w-\[1px\] {
+  width: 1px;
+}
+
+.w-\[2px\] {
+  width: 2px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -579,8 +597,16 @@ video {
   flex-grow: 1;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .grid-cols-12 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
@@ -595,9 +621,8 @@ video {
   gap: 1rem;
 }
 
-.bg-body {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 241 241 / var(--tw-bg-opacity));
+.rounded {
+  border-radius: 0.25rem;
 }
 
 .bg-cook {
@@ -610,6 +635,16 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 241 241 / var(--tw-bg-opacity));
+}
+
 .bg-body-accent {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -620,6 +655,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-divider {
+  --tw-bg-opacity: 1;
+  background-color: rgb(201 201 201 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -628,8 +668,8 @@ video {
   padding: 1rem;
 }
 
-.\!p-8 {
-  padding: 2rem !important;
+.p-8 {
+  padding: 2rem;
 }
 
 .px-2 {
@@ -637,8 +677,21 @@ video {
   padding-right: 0.5rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.leading-8 {
+  line-height: 2rem;
 }
 
 .text-cook-text {
@@ -656,25 +709,9 @@ video {
   color: rgb(81 81 81 / var(--tw-text-opacity));
 }
 
-.toolbar {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-  padding: 0.5rem;
-  font-size: 0.75rem;
-  line-height: 2rem;
-}
-
-@media (min-width: 1024px) {
-  .toolbar {
-    padding-left: 20%;
-    padding-right: 20%;
-  }
-}
-
 .hover\:bg-cook-accent:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(41 41 41 / var(--tw-bg-opacity));
+  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-menu-accent:hover {

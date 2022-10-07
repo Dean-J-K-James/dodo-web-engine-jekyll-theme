@@ -1,7 +1,7 @@
-<nav id="menu" class="toolbar bg-menu text-menu-text">
+<nav class="flex flex-row gap-2 text-xs leading-8 p-2 lg:px-[20%] bg-menu text-menu-text">
     <a href="/"><img src="/assets/images/logo.png"></a>
     <div class="flex-1"></div>
-    {% for button in site.data.menu %}
-    {% include button.html link=button.link name=button.name style='menu' %}
-    {% endfor %}
+    {% include nav.html links=site.data.menu style='menu' %}
+    {% include divider.html %}
+    {% include nav.html links=site.data.social-media style='menu' %}
 </nav>
