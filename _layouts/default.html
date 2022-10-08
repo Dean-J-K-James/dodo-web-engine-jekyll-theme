@@ -1,4 +1,5 @@
 ---
+colour: bg-red-100
 ---
 
 <!doctype html>
@@ -13,11 +14,8 @@
     {% include google-analytics.html %}
 </head>
 
-<body class="flex flex-col h-screen">
-    {% include cook.html %}
-    {% include menu.html %}
-    {{ content }}
-    {% include foot.html %}
+<body class="flex flex-col h-screen {{ layout.colour }}">
+    {% include sections.html sections=page.body %}
 </body>
 
 </html>

@@ -1,0 +1,9 @@
+#########################################
+# --- Default Options for All Pages --- #
+#########################################
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      body: [cook, menu, page, foot]
