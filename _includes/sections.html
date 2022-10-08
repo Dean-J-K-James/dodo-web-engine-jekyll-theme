@@ -1,5 +1,6 @@
 {% for section in include.sections %}
-<{{ site.data.styles[section].tag }} id="{{ section }}" class="{{ site.data.styles[section].css }}">
-    {% include {{ section }}.html %}
-</{{ site.data.styles[section].tag }}>
+<{{ site[section].tag }} id="{{ section }}" class="{{ site[section].css }}">
+    {% assign inc = site[section].inc %}
+    {% include {{ inc }}.html %}
+</{{ site[section].tag }}>
 {% endfor %}

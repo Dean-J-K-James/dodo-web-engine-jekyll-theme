@@ -1,5 +1,4 @@
 ---
-colour: bg-red-100
 ---
 
 <!doctype html>
@@ -7,15 +6,15 @@ colour: bg-red-100
 <html lang="en">
 
 <head>
-    {% include page-meta.html %}
-    {% include meta-seo-tags.html %}
-    {% include meta-links.html %}
-    {% include js-scripts.html %}
-    {% include google-analytics.html %}
+  {% include page-meta.html %}
+  {% include meta-seo-tags.html %}
+  {% include meta-links.html %}
+  {% include js-scripts.html %}
+  {% include google-analytics.html %}
 </head>
 
-<body class="flex flex-col h-screen {{ layout.colour }}">
-    {% include sections.html sections=page.body %}
+<body class="flex flex-col h-screen">
+  {% include sections.html sections=site.structure %}
 </body>
 
 </html>
