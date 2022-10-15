@@ -3,8 +3,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['"Arial"'],
-                text: ['"Segoe UI"']
+                sans: ['"Arial"']
             },
             colors: {
                 'cook': '#1F1F1F',
@@ -20,8 +19,7 @@ module.exports = {
                 'foot-accent': '#DDE7FB',
                 'foot-accent-text': '#4279CE',
                 'body': '#F1F1F1',
-                'body-accent': '#FFFFFF',
-                'divider': '#C9C9C9'
+                'body-accent': '#FFFFFF'
             },
         }
     }
