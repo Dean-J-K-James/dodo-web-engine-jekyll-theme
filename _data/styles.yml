@@ -5,10 +5,11 @@
 # Menus
 cook: lg:px-[20%] !hidden
 menu: lg:px-[20%]
+page: lg:px-[20%]
 foot: lg:px-[20%] p-8
 
 # Sections
 content:
   inc: content
   tag: div
-  css: flex flex-col gap-4 p-4 bg-body-accent
+  css: flex flex-col gap-4 p-4 bg-body-accent rounded
