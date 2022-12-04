@@ -2,12 +2,6 @@
 # --- Styles --- #
 ##################
 
-# Menus
-cook: lg:px-[20%] !hidden
-menu: lg:px-[20%]
-page: lg:px-[20%]
-foot: lg:px-[20%] p-8
-
 # Sections
 content:
   inc: content

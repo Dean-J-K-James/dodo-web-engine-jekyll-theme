@@ -3,9 +3,3 @@
 
 - name: Two Column Page
   link: two-column-page
-
-- name: <i class="fa-brands fa-twitter fa-lg"></i>
-  link: /
-
-- name: <i class="fa-brands fa-youtube fa-lg"></i>
-  link: /

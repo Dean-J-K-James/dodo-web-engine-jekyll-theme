@@ -15,10 +15,10 @@
 </head>
 
 <body class="flex flex-col h-screen">
-  <div id="cook" class="flex flex-row gap-2 text-xs leading-8 p-2 bg-cook text-cook-text {{ site.data.styles.cook }}">{% include cook.html %}</div>
-  <div id="menu" class="flex flex-row gap-2 text-xs leading-8 p-2 bg-menu text-menu-text {{ site.data.styles.menu }}">{% include menu.html %}</div>
+  <div id="cook" class="flex flex-row gap-2 text-xs leading-8 lg:px-[20%] p-2 bg-cook text-cook-text !hidden">{% include cook.html %}</div>
+  <div id="menu" class="flex flex-row gap-2 text-xs leading-8 lg:px-[20%] p-2 bg-menu text-menu-text"        >{% include menu.html %}</div>
   {% include page.html %}
-  <div id="foot" class="flex flex-row gap-2 text-xs leading-8 p-2 bg-foot text-foot-text {{ site.data.styles.foot }}">{% include foot.html %}</div>
+  <div id="foot" class="flex flex-row gap-2 text-xs leading-8 lg:px-[20%] p-8 bg-foot text-foot-text"        >{% include foot.html %}</div>
 </body>
 
 </html>
