@@ -1,4 +1,9 @@
 {% for section in include.sections %}
+{% assign lbl = site.data.styles[section].lbl %}
+{% if lbl != null %}
+{% include subtitle.html text=lbl %}
+{% endif %}
+
 <{{ site.data.styles[section].tag }} id="{{ section }}" class="{{ site.data.styles[section].css }}">
     {% assign inc = site.data.styles[section].inc %}
     {% include {{ inc }}.html %}

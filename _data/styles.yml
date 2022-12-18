@@ -7,3 +7,9 @@ content:
   inc: content
   tag: div
   css: flex flex-col gap-4 p-4 bg-body-accent rounded
+
+content-label:
+  inc: content
+  lbl: Example Label
+  tag: div
+  css: flex flex-col gap-4 p-4 bg-body-accent rounded
