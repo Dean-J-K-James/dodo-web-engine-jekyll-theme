@@ -9,8 +9,8 @@
         {% assign inc = site.data.styles[section].inc %}
         {% include {{ inc }}.html %}
     </{{ site.data.styles[section].tag }}>
-    {% endfor %}
 
     {% if lbl != null %}
 </div>
 {% endif %}
+{% endfor %}
