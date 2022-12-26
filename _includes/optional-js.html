@@ -1,3 +1,5 @@
-{% for js in page.js %}
-<script src="/assets/js/{{ js }}.js" defer></script>
-{% endfor %}
+{% if page.js == true %}
+{% assign js = page.url | prepend: "/assets/js" | append: ".js" | absolute_url %}
+
+<script src="{{ js }}" defer></script>
+{% endif %}
