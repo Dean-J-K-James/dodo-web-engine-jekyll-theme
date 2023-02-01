@@ -1,8 +1,10 @@
 ---
 title:     Dodo Web Engine Jekyll Theme
 permalink: /
-layout:    one-column
-pages:     [content, content]
+sections:  [content-centre, template-two-column]
+cook: standard
+menu: vertical
+body: vertical
+page: standard
+foot: standard
 ---
-
-<p>This is the homepage.</p>

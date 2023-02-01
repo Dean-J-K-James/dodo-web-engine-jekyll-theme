@@ -1,0 +1,13 @@
+{% assign cook = site.data.styles.cook %}
+{% assign menu = site.data.styles.menu %}
+{% assign page = site.data.styles.page %}
+{% assign foot = site.data.styles.foot %}
+
+<div class="flex flex-row h-screen">
+    {% include menu/{{ menu }}.html %}
+    <div class="flex flex-col ml-[256px]">
+        {% include cook/{{ cook }}.html %}
+        {% include page/{{ page }}.html %}
+        {% include foot/{{ foot }}.html %}
+    </div>
+</div>

@@ -551,8 +551,34 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.top-0 {
+  top: 0px;
+}
+
 .col-span-12 {
   grid-column: span 12 / span 12;
+}
+
+.mx-\[20\%\] {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.ml-\[256px\] {
+  margin-left: 256px;
 }
 
 .flex {
@@ -569,6 +595,24 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-max {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.min-w-\[256px\] {
+  min-width: 256px;
 }
 
 .flex-1 {
@@ -593,6 +637,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .gap-2 {
@@ -633,7 +681,7 @@ video {
 
 .bg-foot {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(26 51 81 / var(--tw-bg-opacity));
 }
 
 .p-2 {
@@ -653,9 +701,24 @@ video {
   padding-right: 0.5rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .font-bold {
@@ -676,14 +739,14 @@ video {
   color: rgb(81 81 81 / var(--tw-text-opacity));
 }
 
-.text-foot-text {
-  --tw-text-opacity: 1;
-  color: rgb(81 81 81 / var(--tw-text-opacity));
-}
-
 .text-\[\#979797\] {
   --tw-text-opacity: 1;
   color: rgb(151 151 151 / var(--tw-text-opacity));
+}
+
+.text-foot-text {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:bg-cook-accent:hover {
@@ -692,11 +755,6 @@ video {
 }
 
 .hover\:bg-menu-accent:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(221 231 251 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-foot-accent:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(221 231 251 / var(--tw-bg-opacity));
 }
@@ -717,20 +775,12 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:col-span-12 {
-    grid-column: span 12 / span 12;
-  }
-
   .lg\:col-span-8 {
     grid-column: span 8 / span 8;
   }
 
   .lg\:col-span-4 {
     grid-column: span 4 / span 4;
-  }
-
-  .lg\:p-8 {
-    padding: 2rem;
   }
 
   .lg\:px-\[20\%\] {

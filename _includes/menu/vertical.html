@@ -1,0 +1,14 @@
+<div id="menu" class="flex flex-col gap-2 text-xs leading-8 bg-menu text-menu-text min-w-[256px] h-full fixed p-4">
+    <a href="/"><img src="/assets/images/logo.png"></a>
+    <br>
+    {% include button.html link="/" name="Home"     style="menu" %}
+    {% include button.html link="/" name="About Us" style="menu" %}
+    <hr>
+    {% include button.html link="/" name="Privacy Policy" style="menu" %}
+    {% include button.html link="/" name="Cookies"        style="menu" %}
+    <hr>
+    <div class="flex flex-row gap-2 text-xs leading-8">
+        {% include button.html link="/" name='<i class="fa-brands fa-twitter fa-lg"></i>' style="menu" %}
+        {% include button.html link="/" name='<i class="fa-brands fa-youtube fa-lg"></i>' style="menu" %}
+    </div>
+</div>
