@@ -1,3 +1,6 @@
+{% assign style = include.style %}
+
 <a id="{{ include.id }}" href="{{ include.link }}"
-    class="px-2 font-bold cursor-pointer rounded bg-{{ include.style }} text-{{ include.style }}-text hover:bg-{{ include.style }}-accent hover:text-{{ include.style }}-accent-text">{{
-    include.name }}</a>
+    class="px-2 font-bold rounded bg-{{ style }} text-{{ style }}-text hover:bg-{{ style }}-accent hover:text-{{ style }}-accent-text">
+    {{ include.name }}
+</a>
