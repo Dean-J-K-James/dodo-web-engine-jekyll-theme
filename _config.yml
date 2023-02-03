@@ -1,9 +1,0 @@
-#########################################
-# --- Default Options for All Pages --- #
-#########################################
-
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: "one-column"

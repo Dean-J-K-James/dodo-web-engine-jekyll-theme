@@ -1,6 +1,11 @@
 {% assign style = include.style %}
+{% assign activ = "" %}
+
+{% if page.url contains include.link and include.link != "/" %}
+{% assign activ = "underline" %}
+{% endif %}
 
 <a id="{{ include.id }}" href="{{ include.link }}"
-    class="px-2 font-bold rounded bg-{{ style }} text-{{ style }}-text hover:bg-{{ style }}-accent hover:text-{{ style }}-accent-text">
+    class="px-2 font-bold rounded bg-{{ style }} text-{{ style }}-text hover:bg-{{ style }}-accent hover:text-{{ style }}-accent-text {{ activ }}">
     {{ include.name }}
 </a>
