@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="flex flex-row gap-2 text-xs leading-8">
+    {% include button.html link="/" name="All" style="cell" %}
+    {% for tag in site.category %}
+    {% assign tag_link = tag.title | prepend: '/category/' | downcase %}
+    {% include button.html link=tag_link name=tag.title style="cell" %}
+    {% endfor %}
+</div>
+
+<div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4">
+    {% for post in site.posts %}
+    {% assign tags = post.category | downcase %}
+    {% assign slug = page.slug | downcase %}
+    {% if tags contains slug %}
+    {% include card.html %}
+    {% endif %}
+    {% endfor %}
+</div>

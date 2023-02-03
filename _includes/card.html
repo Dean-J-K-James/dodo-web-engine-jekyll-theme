@@ -1,0 +1,8 @@
+<article class="flex flex-col col-span-4 gap-4 p-4 bg-cell rounded relative">
+    <a href="{{ post.url }}" class="absolute inset-0"></a>
+    <img src="/assets/images{{ post.url }}/banner.png">
+    {% assign date = post.date | date: "%-d %B %Y" %}
+    <h4>{{ post.title }}</h4>
+    {% include subtitle.html text=date %}
+    <p class="truncate">{{ post.description }}</p>
+</article>
