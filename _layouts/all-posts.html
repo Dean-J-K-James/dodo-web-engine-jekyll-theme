@@ -17,7 +17,7 @@ layout: default
         </article>
     </div>
 
-    {% for post in site.posts | offset: 1 %}
+    {% for post in site.posts offset: 1 %}
     {% assign tags = post.category | downcase %}
     {% assign slug = page.slug | downcase %}
     {% if tags contains slug %}
