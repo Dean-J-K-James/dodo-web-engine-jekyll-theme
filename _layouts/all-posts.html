@@ -2,16 +2,22 @@
 layout: default
 ---
 
-<div class="flex flex-row gap-2 text-xs leading-8">
-    {% include button.html link="/" name="All" style="cell" %}
-    {% for tag in site.category %}
-    {% assign tag_link = tag.title | prepend: '/category/' | downcase %}
-    {% include button.html link=tag_link name=tag.title style="cell" %}
-    {% endfor %}
-</div>
+{% assign latest = site.posts.first %}
 
-<div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4">
-    {% for post in site.posts %}
+<div class="grid grid-cols-12 gap-4">
+
+    <div class="flex flex-col col-span-12 bg-cell rounded-lg overflow-hidden">
+        <img src="/assets/images{{ post.url }}/banner.png">
+        <article class="flex flex-col gap-3 p-4">
+            <h4>{{ post.title }}</h4>
+            {% assign date = post.date | date: "%-d %B %Y" %}
+            {% include subtitle.html text=date %}
+            <p class="line-clamp-2 text-left">{{ post.description }}</p>
+            <p><a href="{{ post.url }}">Read More <i class="fa-solid fa-arrow-right"></i></a></p>
+        </article>
+    </div>
+
+    {% for post in site.posts | offset: 1 %}
     {% assign tags = post.category | downcase %}
     {% assign slug = page.slug | downcase %}
     {% if tags contains slug %}

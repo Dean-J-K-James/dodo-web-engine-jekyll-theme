@@ -1,8 +1,8 @@
 {% assign style = include.style %}
-{% assign activ = "no-underline" %}
+{% assign activ = "" %}
 
 {% if page.url contains include.link and include.link != "/" %}
-{% assign activ = "underline" %}
+{% capture activ %}bg-{{ style }}-accent text-{{ style }}-accent-text{% endcapture %}
 {% endif %}
 
 <a id="{{ include.id }}" href="{{ include.link }}"
