@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article class="flex flex-col gap-8 p-4 bg-cell rounded">
+<article class="flex flex-col gap-8 p-4 bg-cell rounded-lg">
     <h1>{{ page.title }}</h1>
     {% assign date = page.date | date: "%-d %B %Y" | prepend: 'Last Updated: ' %}
     {% include subtitle.html text=date %}
@@ -10,13 +10,13 @@ layout: default
     <div class="flex flex-row gap-2 text-xs leading-8">
         {% for tag in page.category %}
         {% assign tag_link = tag | prepend: '/category/' | downcase %}
-        {% include button.html link=tag_link name=tag style="tags" %}
+        {% include button.html link=tag_link name=tag style="cell" %}
         {% endfor %}
     </div>
 </article>
 
-<img class="rounded" src="/assets/images/{{ page.url }}/banner.png">
+<img class="rounded-lg" src="/assets/images/{{ page.url }}/banner.png">
 
-<article class="flex flex-col gap-8 bg-cell rounded p-8">
+<article class="flex flex-col gap-8 bg-cell rounded-lg p-8">
     {{ content }}
 </article>
