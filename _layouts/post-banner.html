@@ -10,7 +10,7 @@ layout: default
     <div class="flex flex-row gap-2 text-xs leading-8">
         {% for tag in page.category %}
         {% assign tag_link = tag | prepend: '/category/' | downcase %}
-        {% include button.html link=tag_link name=tag style="cell" %}
+        {% include button.html link=tag_link name=tag style="tags" %}
         {% endfor %}
     </div>
 </article>
