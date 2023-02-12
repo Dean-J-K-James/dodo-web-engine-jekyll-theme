@@ -1,1 +1,9 @@
-<nav id="foot" class="p-2 bg-foot"></nav>
+<nav id="foot" class="flex flex-row gap-4 text-xs leading-8 p-8 lg:px-[20%] bg-foot">
+    {% for item in site.data.foot %}
+    {% include button.html link=item.link name=item.name style='foot' %}
+    {% endfor %}
+    <div class="flex-1"></div>
+    {% for item in site.data.social-media %}
+    {% include button.html link=item.link name=item.name style='foot' %}
+    {% endfor %}
+</nav>

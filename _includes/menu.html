@@ -1,1 +1,7 @@
-<nav id="menu" class="p-2 bg-menu"></nav>
+<nav id="menu" class="flex flex-row gap-4 text-xs leading-8 p-2 lg:px-[20%] bg-menu">
+    <a href="/"><img src="/assets/images/logo.png"></a>
+    <div class="flex-1"></div>
+    {% for item in site.data.menu %}
+    {% include button.html link=item.link name=item.name style='menu' %}
+    {% endfor %}
+</nav>

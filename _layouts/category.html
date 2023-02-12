@@ -2,12 +2,10 @@
 layout: default
 ---
 
-<div class="flex flex-col gap-4">
-    {% for post in site.posts %}
-    {% assign tags = post.category | downcase %}
-    {% assign slug = page.slug | downcase %}
-    {% if tags contains slug %}
-    {% include result.html %}
-    {% endif %}
-    {% endfor %}
-</div>
+{% for post in site.posts %}
+{% assign tags = post.tags | downcase %}
+{% assign slug = page.slug | downcase %}
+{% if tags contains slug %}
+{% include result.html %}
+{% endif %}
+{% endfor %}

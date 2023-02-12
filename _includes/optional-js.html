@@ -1,4 +1,0 @@
-{% if page.js == true %}
-{% assign js = page.url | prepend: "/assets/js" | append: ".js" | absolute_url %}
-<script src="{{ js }}" defer></script>
-{% endif %}
