@@ -9,7 +9,7 @@ layout: default
     {% include card.html name=post.title url=post.url subtitle=date content=post.description %}
 </div>
 
-<div class="grid grid-cols-12 gap-4">
+<div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4">
     {% for post in site.posts offset: 1 %}
     {% assign date = post.date | date: "%-d %B %Y" %}
     {% include card.html name=post.title url=post.url subtitle=date content=post.description %}

@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% assign slug = page.slug | downcase | prepend: "Posts in the Category: " %}
+{% include subtitle.html text="" %}
 {% for post in site.posts %}
 {% assign tags = post.tags | downcase %}
 {% assign slug = page.slug | downcase %}

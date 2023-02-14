@@ -17,6 +17,18 @@ layout: default
 
 <img class="rounded-lg" src="/assets/images/{{ page.url }}/banner.png">
 
-<article class="flex flex-col gap-8 bg-cell rounded-lg p-8">
+<article class="flex flex-col gap-8 bg-cell rounded-lg p-4">
     {{ content }}
 </article>
+
+{% if page.previous.url %}
+{% include subtitle.html text="Previous Post" %}
+{% assign date = page.previous.date | date: "%-d %B %Y" %}
+{% include card.html name=page.previous.title url=page.previous.url subtitle=date content=page.previous.description %}
+{% endif %}
+<br>
+{% if page.next.url %}
+{% include subtitle.html text="Next Post" %}
+{% assign date = page.next.date | date: "%-d %B %Y" %}
+{% include card.html name=page.next.title url=page.next.url subtitle=date content=page.next.description %}
+{% endif %}
