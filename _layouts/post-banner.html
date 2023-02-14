@@ -21,14 +21,13 @@ layout: default
     {{ content }}
 </article>
 
-{% if page.previous.url %}
-{% include subtitle.html text="Previous Post" %}
-{% assign date = page.previous.date | date: "%-d %B %Y" %}
-{% include card.html name=page.previous.title url=page.previous.url subtitle=date content=page.previous.description %}
+{% assign i = 0 %}
+{% for similar in site.posts %}
+{% for tag in page.tags %}
+{% if similar.tags contains tag and similar.slug != page.slug and i < 5 %}
+{% include result.html name=similar.title url=similar.url subtitle=date content=similar.description %}
+{% assign i = i | plus:1 %}
+{% break %}
 {% endif %}
-<br>
-{% if page.next.url %}
-{% include subtitle.html text="Next Post" %}
-{% assign date = page.next.date | date: "%-d %B %Y" %}
-{% include card.html name=page.next.title url=page.next.url subtitle=date content=page.next.description %}
-{% endif %}
+{% endfor %}
+{% endfor %}
