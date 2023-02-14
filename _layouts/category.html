@@ -6,6 +6,6 @@ layout: default
 {% assign tags = post.tags | downcase %}
 {% assign slug = page.slug | downcase %}
 {% if tags contains slug %}
-{% include result.html %}
+{% include result.html name=post.title url=post.url subtitle=date content=post.description %}
 {% endif %}
 {% endfor %}
