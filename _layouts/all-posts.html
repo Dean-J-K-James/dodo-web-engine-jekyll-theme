@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-<div class="grid grid-cols-4 gap-4">
+<div class="grid grid-cols-4">
     {% assign post = site.posts.first %}
     {% assign date = post.date | date: "%-d %B %Y" %}
     {% include card.html name=post.title url=post.url subtitle=date content=post.description %}
