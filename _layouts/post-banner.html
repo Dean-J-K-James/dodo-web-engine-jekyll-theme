@@ -21,13 +21,17 @@ layout: default
     {{ content }}
 </article>
 
+{% assign posts = "" | split: ',' %}
+
 {% assign i = 0 %}
 {% for similar in site.posts %}
 {% for tag in page.tags %}
 {% if similar.tags contains tag and similar.slug != page.slug and i < 5 %}
-{% include result.html name=similar.title url=similar.url subtitle=date content=similar.description %}
-{% assign i = i | plus:1 %}
+{% assign posts=posts | push: similar %}
+{% assign i=i | plus:1 %}
 {% break %}
 {% endif %}
 {% endfor %}
 {% endfor %}
+
+{% include card-list.html posts=posts %}

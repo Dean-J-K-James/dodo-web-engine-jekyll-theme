@@ -1,0 +1,6 @@
+<div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-8">
+    {% for post in include.posts %}
+    {% assign date = post.date | date: "%-d %B %Y" %}
+    {% include card.html name=post.title url=post.url subtitle=date content=post.description %}
+    {% endfor %}
+</div>

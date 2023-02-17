@@ -2,11 +2,15 @@
 layout: default
 ---
 
+{% assign posts = "" | split: ',' %}
+
 {% for post in site.posts %}
 {% assign tags = post.tags | downcase %}
 {% assign slug = page.slug | downcase %}
 {% assign date = post.date | date: "%-d %B %Y" %}
 {% if tags contains slug %}
-{% include result.html name=post.title url=post.url subtitle=date content=post.description %}
+{% assign posts = posts | push: post %}
 {% endif %}
 {% endfor %}
+
+{% include card-list.html posts=posts %}
