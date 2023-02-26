@@ -1,5 +1,7 @@
 <div id="page" class="flex flex-col flex-grow">
     {% for section in page.sections %}
-    {% include sections/{{ section }}.html %}
+    <div class="flex flex-col gap-8 p-8 lg:py-16 lg:px-[20%] relative overflow-hidden">
+        {% include sections/{{ section }}.html %}
+    </div>
     {% endfor %}
 </div>
