@@ -4,6 +4,6 @@
     {% endfor %}
     <div class="flex-1"></div>
     {% for item in site.data.social-media %}
-    {% include icon.html link=item.link name=item.name style='foot' %}
+    {% include icon.html link=item.link name=item.name style=item.type %}
     {% endfor %}
 </nav>
