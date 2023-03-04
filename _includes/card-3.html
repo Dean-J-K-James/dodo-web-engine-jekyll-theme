@@ -3,7 +3,7 @@
     <article class="flex flex-col gap-4 p-4 items-start">
         <h4>{{ include.post.title }}</h4>
         {% assign date = include.post.date | date: "%-d %B %Y" %}
-        {% include subtitle.html text=date %}
+        <h6>{{ date }}</h6>
         <p class="line-clamp-2">{{ include.post.description }}</p>
         {% include button.html link=post.url name="Learn More" style="primary" %}
     </article>
