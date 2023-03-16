@@ -9,14 +9,15 @@
   {% include page-meta.html %}
   {% include meta-seo-tags.html %}
   {% include meta-links.html %}
-  {% include meta-extra.html %}
   {% include js-scripts.html %}
-  {% include js-extra.html %}
   {% include google-analytics.html %}
 </head>
 
 <body class="flex flex-col h-screen bg-body">
-  {% include body.html %}
+  {% include cook.html %}
+  {% include menu.html %}
+  {{ content }}
+  {% include foot.html %}
 </body>
 
 </html>
