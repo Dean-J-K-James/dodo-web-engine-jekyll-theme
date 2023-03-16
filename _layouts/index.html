@@ -2,7 +2,7 @@
 layout: one-column
 ---
 
-<div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-2 md:gap-4 lg:gap-8">
+<div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-2 md:gap-4">
     {% for post in site.posts %}
     {% assign tags = post.tags | downcase %}
     {% assign slug = page.slug | downcase %}
