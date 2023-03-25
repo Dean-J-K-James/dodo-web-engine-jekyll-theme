@@ -2,10 +2,6 @@
 layout: default
 ---
 
-<div id="page" class="flex flex-col flex-grow">
-    {% for section in page.sections %}
-    <div class="flex flex-col gap-2 md:gap-4 lg:gap-8 p-4 md:p-8 lg:p-16 lg:px-[20%] relative overflow-hidden">
-        {% include sections/{{ section }}.html %}
-    </div>
-    {% endfor %}
-</div>
+{% for section in page.struct %}
+{% include {{ section.type }}.html sections=section %}
+{% endfor %}
