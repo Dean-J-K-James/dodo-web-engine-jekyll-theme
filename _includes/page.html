@@ -1,3 +1,5 @@
 <div id="page" class="flex flex-col flex-grow">
-    {{ content }}
+    {% for section in page.struct %}
+    {% include {{ section.type }}.html sections=section %}
+    {% endfor %}
 </div>
