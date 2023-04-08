@@ -2,7 +2,7 @@
 {% assign activ = "" %}
 
 {% if page.url contains include.link and include.link != "/" %}
-{% capture activ %}bg-{{ style }}-accent text-{{ style }}-accent-text{% endcapture %}
+{% capture activ %}!bg-{{ style }}-accent !text-{{ style }}-accent-text{% endcapture %}
 {% endif %}
 
 <a id="{{ include.id }}" href="{{ include.link }}"
