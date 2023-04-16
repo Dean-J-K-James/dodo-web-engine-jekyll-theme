@@ -1,11 +1,28 @@
-{% assign style = include.style %}
+{% assign item = include.item %}
+
+{% assign style = include.item.styl %}
 {% assign activ = "" %}
 
-{% if page.url contains include.link and include.link != "/" %}
+{% if page.url contains include.item.link and include.item.link != "/" %}
 {% capture activ %}!bg-{{ style }}-accent !text-{{ style }}-accent-text{% endcapture %}
 {% endif %}
 
-<a id="{{ include.id }}" href="{{ include.link }}"
-    class="px-2 font-bold text-xs leading-8 rounded !no-underline bg-{{ style }} text-{{ style }}-text hover:bg-{{ style }}-accent hover:text-{{ style }}-accent-text {{ activ }}">
-    {{ include.name }}
+{% assign spacing = "" %}
+
+{% if item.text == null %}
+{% capture spacing %}w-8 items-center justify-center{% endcapture %}
+{% else %}
+{% capture spacing %}px-2{% endcapture %}
+{% endif %}
+
+<a id="{{ include.item.id }}" href="{{ include.item.link }}"
+    class="flex flex-row gap-2 {{ spacing }} font-bold text-xs leading-8 rounded !no-underline bg-{{ style }} text-{{ style }}-text hover:bg-{{ style }}-accent hover:text-{{ style }}-accent-text {{ activ }}">
+
+    {% if item.icon != null %}
+    <span>{{ item.icon }}</span>
+    {% endif %}
+
+    {% if item.text != null %}
+    <span>{{ item.text }}</span>
+    {% endif %}
 </a>

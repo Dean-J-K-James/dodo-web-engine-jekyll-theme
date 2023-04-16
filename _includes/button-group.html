@@ -1,5 +1,5 @@
-<div class="flex flex-row leading-8 gap-2">
+<div class="flex flex-{{ include.dir | default: 'row' }} gap-{{ include.gap | default: '2' }} leading-8">
     {% for item in include.data %}
-    {% include {{ item.mode }}.html link=item.link name=item.name style=item.type %}
+    {% include button.html item=item %}
     {% endfor %}
 </div>
