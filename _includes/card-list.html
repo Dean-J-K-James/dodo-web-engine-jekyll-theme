@@ -1,10 +1,13 @@
-<div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-2">
+<div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-2 md:gap-4">
     {% for post in site.posts %}
     {% assign tags = post.tags | downcase %}
     {% assign slug = page.slug | downcase %}
+    {% if slug == "all" %}
+    {% assign slug = "" %}
+    {% endif %}
     {% if tags.size > 2 %}
     {% if tags contains slug %}
-    {% include {{ page.card }}.html post=post %}
+    {% include card.html post=post %}
     {% endif %}
     {% endif %}
     {% endfor %}
