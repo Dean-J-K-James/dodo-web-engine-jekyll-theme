@@ -1,3 +1,4 @@
-{% for section in include.sections %}
+{% assign sections = include.sections | split: ',' %}
+{% for section in sections %}
 {% include {{ section }}.html %}
 {% endfor %}
