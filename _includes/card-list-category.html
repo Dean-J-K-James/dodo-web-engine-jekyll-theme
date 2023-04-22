@@ -1,4 +1,4 @@
-<div class="grid {{ layout.card-list-size | default: 'grid-cols-4 md:grid-cols-8 lg:grid-cols-12' }} {{ layout.card-list-gap | default: 'gap-2' }}">
+<div class="grid grid-cols-12 gap-2">
     {% for post in site.posts %}
     {% assign tags = post.tags | downcase %}
     {% assign slug = page.slug | downcase %}
