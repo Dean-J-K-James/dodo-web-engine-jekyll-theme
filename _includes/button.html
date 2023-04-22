@@ -7,16 +7,22 @@
 {% assign styl = include.styl | default: item.styl %}
 
 {% assign activ = "" %}
+{% assign space = "" %}
 
 {% if page.url contains link and link != "/" %}
 {% capture activ %}bg-{{ styl }}-accent text-{{ styl }}-accent-text{% endcapture %}
 {% else %}
-{% capture activ %}bg-{{ styl }} text-{{ styl }}-text hover:bg-{{ styl }}-accent hover:text-{{ styl }}-accent-text{%
-endcapture %}
+{% capture activ %}bg-{{ styl }} text-{{ styl }}-text hover:bg-{{ styl }}-accent hover:text-{{ styl }}-accent-text{% endcapture %}
+{% endif %}
+
+{% if icon != null and text == null %}
+{% capture space %}w-8 justify-center{% endcapture %}
+{% else %}
+{% capture space %}px-2{% endcapture %}
 {% endif %}
 
 <a id="{{ name }}" href="{{ link }}"
-    class="flex flex-row gap-2 px-2 font-bold text-xs leading-8 rounded !no-underline {{ activ }}">
+    class="flex flex-row gap-2 font-bold text-xs leading-8 rounded !no-underline {{ space }} {{ activ }}">
 
     {% if icon != null %}
     <span class="">{{ icon }}</span>
