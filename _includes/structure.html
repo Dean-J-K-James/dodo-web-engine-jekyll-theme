@@ -1,0 +1,3 @@
+{% for data in include.data %}
+{% include {{ data.styl | default: 'layout-default' }}.html data=data %}
+{% endfor %}

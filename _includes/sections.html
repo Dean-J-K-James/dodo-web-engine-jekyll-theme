@@ -1,15 +1,8 @@
-{% assign sections = include.sections | split: ',' %}
-{% for section in sections %}
-{% assign title = section | append: '-head' %}
-
-{% if layout[title] != null %}
+{% if include.data.head != null %}
 <div class="flex flex-col gap-4">
-    <h6>{{ layout[title] }}</h6>
-    {% endif %}
-
-    {% include {{ section }}.html %}
-
-    {% if layout[title] != null %}
+    <h6>{{ include.data.head }}</h6>
+    {% include {{ include.data.sect }}.html data=include.data %}
 </div>
+{% else %}
+{% include {{ include.data.sect }}.html data=include.data %}
 {% endif %}
-{% endfor %}

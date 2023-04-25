@@ -1,5 +1,5 @@
 <div class="grid grid-cols-12 gap-2">
     {% for post in site.posts limit:6 %}
-    {% include {{ layout.card | default: 'card' }}.html post=post %}
+    {% include {{ include.data.card | default: 'card' }}.html post=post %}
     {% endfor %}
 </div>

@@ -6,7 +6,7 @@
     {% assign slug = "" %}
     {% endif %}
     {% if tags contains slug %}
-    {% include {{ layout.card | default: 'card' }}.html post=post %}
+    {% include {{ include.data.card | default: 'card' }}.html post=post %}
     {% endif %}
     {% endfor %}
 </div>
