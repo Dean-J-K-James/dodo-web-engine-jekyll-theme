@@ -1,7 +1,0 @@
-<article class="flex flex-col gap-lg p-lg bg-white rounded relative">
-    <h1>{{ page.title }}</h1>
-    <h6>{{ page.date | date: "%-d %B %Y" | prepend: 'Last Updated: ' }}</h6>
-    <p>{{ page.description }}</p>
-    {% assign tags = site.category | where_exp: "item", "page.tags contains item.slug" | concat: site.data.social-media %}
-    {% include button-group.html data=tags %}
-</article>
