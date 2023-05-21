@@ -1,4 +1,4 @@
-<div class="flex flex-{{ include.dir | default: 'row' }} gap-{{ include.gap | default: '2' }} leading-8">
+<div class="flex flex-{{ include.dir | default: 'row' }} {{ include.piv | default: 'justify-normal' }} gap-{{ include.gap | default: '2' }} leading-8">
     {% for item in include.data %}
     {% include button.html item=item %}
     {% endfor %}

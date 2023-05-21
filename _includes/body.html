@@ -1,6 +1,8 @@
+{% assign page-meta = site.data[page.data] %}
+
 <body class="flex flex-col h-screen bg-body">
-    {% include menu.html %}
-    {% include cook.html %}
-    {% include page.html %}
-    {% include foot.html %}
+    {% include {{ page-meta.cook.type | default: 'cook' }}.html %}
+    {% include {{ page-meta.menu.type | default: 'menu' }}.html %}
+    {% include {{ page-meta.page.type | default: 'page' }}.html %}
+    {% include {{ page-meta.foot.type | default: 'foot' }}.html %}
 </body>
