@@ -1,4 +1,3 @@
-<div id="page" class="flex flex-col flex-grow tracking-wide {{ page-meta.page.class }}">
-    {% assign data = page-meta.struct %}
-    {% include structure.html data=data %}
+<div id="page" class="flex flex-col flex-grow tracking-wide {{ page-meta.style.page }}">
+    {% include structure.html data=page-meta.struct %}
 </div>
