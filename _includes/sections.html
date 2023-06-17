@@ -1,10 +1,2 @@
-{% assign sect-meta = page-meta[include.data.sect] %}
-
-{% if sect-meta.head != null %}
-<div class="flex flex-col gap-4">
-    <p class="text-xs font-bold">{{ sect-meta.head }}</p>
-    {% include {{ include.data.sect }}.html data=include.data %}
-</div>
-{% else %}
+{% assign sect = page[include.data.sect] %}
 {% include {{ include.data.sect }}.html data=include.data %}
-{% endif %}
