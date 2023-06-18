@@ -1,5 +1,5 @@
 <div class="flex {{ include.data.group }}">
     {% for item in include.data.links %}
-    {% include {{ include.data.type | default: button }}.html name=item.name icon=item.icon text=item.text link=item.link styl=item.styl class=include.data.class %}
+    {% include {{ include.data.type | default: "button" }}.html name=item.name icon=item.icon text=item.text link=item.link styl=item.styl class=include.data.class %}
     {% endfor %}
 </div>
