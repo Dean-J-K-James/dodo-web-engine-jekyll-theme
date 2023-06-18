@@ -1,35 +1,4 @@
-{% assign item = include.item %}
-
-{% assign name = include.name | default: item.name %}
-{% assign text = include.text | default: item.text %}
-{% assign icon = include.icon | default: item.icon %}
-{% assign link = include.link | default: item.link %}
-{% assign styl = include.styl | default: item.styl %}
-
-{% assign activ = "" %}
-{% assign space = "" %}
-
-{% if page.url contains link and link != "/" %}
-{% capture activ %}bg-{{ styl }}-accent text-{{ styl }}-accent-text{% endcapture %}
-{% else %}
-{% capture activ %}bg-{{ styl }} text-{{ styl }}-text hover:bg-{{ styl }}-accent hover:text-{{ styl }}-accent-text{% endcapture %}
-{% endif %}
-
-{% if icon != null and text == null %}
-{% capture space %}w-8 justify-center{% endcapture %}
-{% else %}
-{% capture space %}px-2{% endcapture %}
-{% endif %}
-
-<a id="{{ name }}" href="{{ link }}"
-    class="flex flex-row gap-2 font-bold text-xs leading-8 !no-underline {{ site.data.styles.button }} {{ space }} {{ activ }}">
-
-    {% if icon != null %}
-    <span>{{ icon }}</span>
-    {% endif %}
-
-    {% if text != null %}
-    <span>{{ text }}</span>
-    {% endif %}
-
+<a id="{{ include.name }}" href="{{ include.link }}"
+    class="font-bold text-xs px-2 leading-8 !no-underline {{ include.styl | default: include.class }}">
+    {{ include.text }}
 </a>
