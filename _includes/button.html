@@ -1,4 +1,8 @@
-<a id="{{ include.name }}" href="{{ include.link }}"
-    class="font-bold text-xs px-2 leading-8 !no-underline {{ include.styl | default: include.class }}">
-    {{ include.text }}
+{% assign name = item.name | default: include.name %}
+{% assign link = item.link | default: include.link %}
+{% assign styl = item.styl | default: include.styl %}
+{% assign text = item.text | default: include.text %}
+
+<a id="{{ name }}" href="{{ link }}" class="font-bold text-xs px-2 leading-8 !no-underline {{ styl }}">
+    {{ text }}
 </a>
