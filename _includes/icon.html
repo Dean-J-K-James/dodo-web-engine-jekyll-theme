@@ -1,4 +1,9 @@
-<a id="{{ include.name }}" href="{{ include.link }}"
-    class="flex flex-row text-xs leading-8 !no-underline w-8 justify-center {{ include.styl | default: include.class }}">
-    <span>{{ include.icon }}</span>
+{% assign name = item.name | default: include.name %}
+{% assign link = item.link | default: include.link %}
+{% assign styl = item.styl | default: include.styl %}
+{% assign icon = item.icon | default: include.icon %}
+
+<a id="{{ name }}" href="{{ link }}"
+    class="flex flex-row text-xs leading-8 !no-underline w-8 justify-center {{ styl }}">
+    <span>{{ icon }}</span>
 </a>

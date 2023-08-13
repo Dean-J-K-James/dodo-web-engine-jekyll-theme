@@ -1,4 +1,4 @@
 {% for data in include.data %}
 {% assign sect = page[data.sect] %}
-{% include {{ data.sect }}.html data=data %}
+{% include {{ data.styl | default: 'no-style' }}.html data=data %}
 {% endfor %}
