@@ -3,6 +3,6 @@
 {% assign styl = item.styl | default: include.styl %}
 {% assign text = item.text | default: include.text %}
 
-<a id="{{ name }}" href="{{ link }}" class="font-bold text-xs px-2 leading-8 !no-underline {{ styl }}">
+<a id="{{ name }}" href="{{ link }}" class="font-bold text-xs text-center px-2 leading-8 !no-underline {{ styl }}">
     {{ text }}
 </a>
