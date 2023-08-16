@@ -1,6 +1,6 @@
 <body class="flex flex-col h-screen bg-body {{ page.body }}">
-    {% if site.cook != false %}{% include cook.html %}{% endif %}
-    {% if site.menu != false %}{% include menu.html %}{% endif %}
-    {% if site.page != false %}{% include page.html %}{% endif %}
-    {% if site.foot != false %}{% include foot.html %}{% endif %}
+    {% include {{ site.cook | default: 'cook' }}.html %}
+    {% include {{ site.menu | default: 'menu' }}.html %}
+    {% include {{ site.page | default: 'page' }}.html %}
+    {% include {{ site.foot | default: 'foot' }}.html %}
 </body>
