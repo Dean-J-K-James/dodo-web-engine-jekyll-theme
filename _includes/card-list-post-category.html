@@ -1,0 +1,12 @@
+<div class="grid grid-cols-12 gap-2">
+    {% for item in site.posts %}
+    {% assign tags = item.tags | downcase %}
+    {% assign slug = item.slug | downcase %}
+    {% if slug == "all" %}
+    {% assign slug = "" %}
+    {% endif %}
+    {% if tags contains slug %}
+    {% include {{ include.data.card }}.html item=item %}
+    {% endif %}
+    {% endfor %}
+</div>

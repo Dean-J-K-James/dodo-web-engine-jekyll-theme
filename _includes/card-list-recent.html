@@ -1,9 +1,0 @@
-<div class="grid grid-cols-12 gap-4">
-    {% assign i = 0 %}
-    {% for post in site.posts %}
-    {% if page.slug != post.slug and i < include.data.leng %}
-    {% assign i = i | plus:1 %}
-    {% include {{ include.data.card | default: 'card' }}.html post=post %}
-    {% endif %}
-    {% endfor %}
-</div>

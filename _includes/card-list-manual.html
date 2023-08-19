@@ -1,5 +1,5 @@
 <div class="grid grid-cols-12 gap-2">
-    {% for item in sect.cards %}
-    {% include {{ sect.card }}.html item=item %}
+    {% for item in include.data.cards %}
+    {% include {{ include.data.card }}.html item=item %}
     {% endfor %}
 </div>

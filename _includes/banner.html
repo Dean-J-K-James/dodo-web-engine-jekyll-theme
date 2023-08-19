@@ -1,5 +1,6 @@
-<div class="flex flex-col gap-16 px-8 py-32 md:px-[10%] lg:px-[20%] items-center text-center relative">
-    <img src="/assets/images/{{ page.url }}/banner.png" class="absolute inset-0 h-full w-full -z-10" />
-    {% if sect.title %}<h1 class="font-bold text-6xl text-white">{{ sect.title }}</h1>{% endif %}
-    {% if sect.subtl %}<h1 class="font-bold text-2xl text-white">{{ sect.subtl }}</h1>{% endif %}
+<div class="flex flex-col gap-8 px-8 py-32 md:px-[10%] lg:px-[20%] items-center text-center relative">
+    <img src="/assets/images/{{ page.url }}/banner.png" class="absolute inset-0 h-full w-full object-cover -z-10" />
+    {% if data.head %}<h1 class="font-bold text-2xl text-white">{{ page.title }}      </h1>{% endif %}
+    {% if data.desc %}<h1 class="font-bold text-6xl text-white">{{ page.description }}</h1>{% endif %}
+    {% if data.butn %}{% include button.html text=data.butn.text styl=data.butn.styl %}{% endif %}
 </div>
