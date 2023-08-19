@@ -1,0 +1,9 @@
+<div class="col-span-12 flex flex-col sm:flex-row gap-4 p-4 bg-white overflow-hidden">
+    <img class="sm:h-[164px]" src="/assets/images{{ include.item.url }}/thumbnail.png">
+    <article class="flex flex-col gap-4">
+        <h4>{{ include.item.title }}</h4>
+        <h6>{{ include.item.date | date: "%-d %B %Y" }}</h6>
+        <p class="line-clamp-2">{{ include.item.description }}</p>
+        <p><a href="{{ include.item.url }}">Learn More <i class="fa-solid fa-arrow-right"></i></a></p>
+    </article>
+</div>

@@ -1,0 +1,6 @@
+<article class="col-span-12 flex flex-col gap-4 bg-white p-4 rounded-lg cursor-pointer" x-data="{ open: false }" @click="open = !open">
+
+    <strong>{{ item.title }}</strong>
+    <p x-show="open">{{ item.description }}</p>
+
+</article>

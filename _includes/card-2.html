@@ -1,0 +1,10 @@
+<div class="col-span-4 bg-white rounded-lg flex flex-col overflow-hidden">
+    <img src="/assets/images/{{ item.url }}/{{ item.image | default: '/banner' }}.png">
+    <article class="flex flex-col gap-4 p-4">
+        <h2>{{ item.title }}</h2>
+        <p>{{ item.description }}</p>
+        {% if item.url != nil %}
+        <p><a href="{{ item.url }}">Learn More <i class="fa-solid fa-arrow-right"></i></a></p>
+        {% endif %}
+    </article>
+</div>
