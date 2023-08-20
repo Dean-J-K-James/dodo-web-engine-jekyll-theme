@@ -1,0 +1,4 @@
+<a href="{{ item.url }}"
+    class="col-span-6 md:col-span-4 lg:col-span-3 overflow-hidden cursor-pointer {{ data.clss }} {{ item.clss }}">
+    <img class="hover:brightness-50" src="/assets/images/{{ item.url }}/{{ item.image | default: data.image }}.png">
+</a>
