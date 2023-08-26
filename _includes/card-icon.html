@@ -1,0 +1,7 @@
+<div class="col-span-6 flex flex-col sm:flex-row gap-8 p-8 bg-white overflow-hidden">
+    <span><i class="fa-solid {{ item.icon }} fa-fw fa-2x text-tag-blue-text"></i></span>
+    <article class="flex flex-col gap-4">
+        <h4>{{ item.title }}</h4>
+        {{ item.content | markdownify }}
+    </article>
+</div>

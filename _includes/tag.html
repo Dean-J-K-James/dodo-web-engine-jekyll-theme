@@ -1,0 +1,4 @@
+{% assign styl = item.styl | default: include.styl %}
+{% assign text = item.text | default: include.text %}
+
+<span class="text-xs text-center px-2 leading-8 {{ styl }}">{{ text }}</span>

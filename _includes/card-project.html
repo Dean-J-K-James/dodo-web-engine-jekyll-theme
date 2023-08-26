@@ -1,0 +1,8 @@
+<div class="col-span-12 flex flex-col sm:flex-row gap-8 p-8 bg-white overflow-hidden">
+    <img class="sm:h-[164px]" src="/assets/images/{{ item.slug }}.png">
+    <article class="flex flex-col gap-4">
+        <h4>{{ item.title }}</h4>
+        {% include button-group.html data=item.tags type="tag" styl="bg-tag-blue text-tag-blue-text rounded" %}
+        {{ item.content | markdownify }}
+    </article>
+</div>
