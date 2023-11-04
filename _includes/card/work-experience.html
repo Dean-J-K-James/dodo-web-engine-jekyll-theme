@@ -1,11 +1,9 @@
-<article class="col-span-4 flex flex-col gap-4 {{ data.clss }}">
+<article class="col-span-12 flex flex-col gap-4 {{ data.clss }}">
     <div class="flex flex-row gap-4 leading-8">
-        <p class="leading-8"><strong>{{ item.title }}</strong></p>
+        <h5>{{ item.title }}</h5>
         <div class="grow"></div>
-        {% include tag.html text=item.dates %}
+        {% include button/tag.html text=item.dates %}
     </div>
-    <div class="flex flex-col gap-4">
-        {{ item.content | markdownify }}
-        {% include button-group.html data=item.tags type="tag" %}
-    </div>
+    {{ item.content | markdownify }}
+    {% include button-group.html data=item.tags type="button/tag" %}
 </article>
