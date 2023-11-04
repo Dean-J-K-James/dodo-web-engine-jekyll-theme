@@ -1,0 +1,8 @@
+{% assign name = item.name | default: include.name %}
+{% assign link = item.link | default: include.link %}
+{% assign styl = item.styl | default: include.styl | default: site.data.styles.button %}
+{% assign text = item.text | default: include.text %}
+
+<a id="{{ name }}" href="{{ link }}" class="text-xs text-center px-2 leading-8 !no-underline {{ styl }}">
+    {{ text }}
+</a>

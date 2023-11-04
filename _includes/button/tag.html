@@ -1,4 +1,4 @@
-{% assign styl = item.styl | default: include.styl %}
+{% assign styl = item.styl | default: include.styl | default: site.data.styles.tag %}
 {% assign text = item.text | default: include.text %}
 
 <span class="text-xs text-center px-2 leading-8 {{ styl }}">{{ text }}</span>

@@ -1,5 +1,5 @@
-<div id="{{ data.id }}" class="flex flex-col gap-4 relative">
-    {% if data.head %}<h2 class="text-neutral-500 text-xs">{{ data.head }}</h2>{% endif %}
+<div id="{{ data.id }}" class="flex flex-col gap-8 relative">
+    {% if data.head %}<h2 class="{{ site.data.styles.section-head }}">{{ data.head }}</h2>{% endif %}
     {% include sections.html data=data.page %}
-    {% if data.foot %}<h2 class="text-neutral-500 text-xs">{{ data.foot }}</h2>{% endif %}
+    {% if data.foot %}<h2 class="{{ site.data.styles.section-foot }}">{{ data.foot }}</h2>{% endif %}
 </div>

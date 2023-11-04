@@ -1,6 +1,6 @@
 {% assign name = item.name | default: include.name %}
 {% assign link = item.link | default: include.link %}
-{% assign styl = item.styl | default: include.styl %}
+{% assign styl = item.styl | default: include.styl | default: site.data.styles.icon %}
 {% assign icon = item.icon | default: include.icon %}
 
 <a id="{{ name }}" href="{{ link }}"

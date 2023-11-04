@@ -1,9 +1,0 @@
-<nav class="flex flex-row p-4 md:px-[10%] lg:px-[20%] justify-between bg-white border-b border-neutral-200 sticky top-0 cursor-pointer z-10"
-    x-data @click="window.scrollTo({top: 0, behavior: 'smooth' })">
-    {% assign set1 = site.data[include.data.set1] %}
-    {% assign set2 = site.data[include.data.set2] %}
-
-    {% include button-group.html data=set1 %}
-    <div class="grow"></div>
-    {% include button-group.html data=set2 %}
-</nav>
